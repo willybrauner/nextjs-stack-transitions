@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color-scheme: dark;
+  font-size: 25px;
+}
+
+.App {
+  padding: 2rem;
+}
+
+.Stack {
+  position: relative;
+}
+
+.Stack > * {
+  top: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+a:hover {
+  color: indianred;
+  cursor: pointer;
+}
+
+select {
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 18px;
+  outline: none;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "nextjs-stack-transitions",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "gsap": "^3.11.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "next": "^12.3.1",
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "prettier": "^2.7.1",
+    "typescript": "4.8.4",
+    "vercel": "^28.4.8"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100
+  }
+}
