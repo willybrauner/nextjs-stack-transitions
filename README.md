@@ -15,7 +15,7 @@ animated with GSAP, but could be with any other libs.
 <br>
 
 
-## How it's works
+## How it works
 
 When the user update the browser history by clicking on "About" link, the Stack
 will render two pages components:
