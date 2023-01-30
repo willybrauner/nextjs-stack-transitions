@@ -1,4 +1,4 @@
-# NextJS route Stack transitions
+# NextJS Stack transitions
 
 This repo is an example of [NextJS](https://nextjs.org/) route transitions via a Stack component
 whose purpose is to render flexible "how" and "when" the playIn and playOut of each
