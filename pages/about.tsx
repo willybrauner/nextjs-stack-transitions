@@ -1,3 +1,4 @@
+import css from "./about.module.css"
 import { gsap } from "gsap"
 import { forwardRef, useRef, useImperativeHandle } from "react"
 import { TRANSITION_DURATION } from "./_app"
@@ -22,7 +23,7 @@ function About(props, handleRef): JSX.Element {
   }))
 
   return (
-    <div ref={$root}>
+    <div ref={$root} className={css.root}>
       <h1>About</h1>
     </div>
   )
