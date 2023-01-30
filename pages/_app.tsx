@@ -59,6 +59,7 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
         <Link href="/about">About</Link>
       </nav>
       <Stack
+        pageProps={pageProps}
         Component={Component}
         customTransitions={transitionFn === "crossed" ? crossed : sequential}
       />
