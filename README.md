@@ -1,11 +1,10 @@
-# NextJS Stack transitions
+# NextJS stack transitions
 
 This repo is an example of [NextJS](https://nextjs.org/) route transitions via a [Stack component](./components/stack/Stack.tsx)
 whose purpose is to render flexible "how" and "when" the playIn and playOut of each
 page component is played.
 
-The main goal is to have the same Stack logic existing
-on [@cher-ami/router](https://github.com/cher-ami/router)
+The main goal is to have the same Stack logic existing on [@cher-ami/router](https://github.com/cher-ami/router)
 but on nextJS file system routing. Secondary, to be able to handle route transitions
 without a DOM bound animation library like React Spring. This example is
 animated with GSAP, but could be with any other libs.
