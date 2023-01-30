@@ -1,6 +1,6 @@
 # NextJS Stack transitions
 
-This repo is an example of [NextJS](https://nextjs.org/) route transitions via a Stack component
+This repo is an example of [NextJS](https://nextjs.org/) route transitions via a [Stack component](./components/stack/Stack.tsx)
 whose purpose is to render flexible "how" and "when" the playIn and playOut of each
 page component is played.
 
@@ -13,7 +13,6 @@ animated with GSAP, but could be with any other libs.
 <br>
 <img alt="screen" src="./screen.gif">
 <br>
-
 
 ## How it works
 
@@ -43,8 +42,16 @@ these properties.
 const Home = forwardRef((props, handleRef) => {
   const $root = useRef(null)
   useImperativeHandle(handleRef, () => ({
-    playIn: () => gsap.timeline().fromTo($root.current, { autoAlpha: 0 }, { autoAlpha: 1 }),
-    playOut: () => gsap.timeline().to($root.current, { autoAlpha: 0 }),
+    playIn: () =>
+      gsap.timeline().fromTo(
+        $root.current,
+        { autoAlpha: 0 },
+        { autoAlpha: 1 }
+      ),
+    playOut: () =>
+      gsap.timeline().to($root.current, {
+        autoAlpha: 0,
+      }),
     $root: $root.current,
   }))
 })
