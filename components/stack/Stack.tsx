@@ -1,4 +1,4 @@
-import React, { useRef, useReducer, useLayoutEffect, useEffect } from "react"
+import React, { useRef, useReducer, useLayoutEffect, useEffect, memo } from "react"
 import { NextComponentType, NextPageContext } from "next"
 import { Router } from "next/router"
 
@@ -21,7 +21,6 @@ export interface IProps {
   pageProps
 }
 
-// Helper
 const useIsomorphicLayoutEffect =
   typeof window !== "undefined" && window.document?.createElement ? useLayoutEffect : useEffect
 
@@ -157,7 +156,7 @@ function Stack(props: IProps): JSX.Element {
       })
       // when internal promise is resolved
       .then(unmountPrev)
-  }, [state.current, props.customTransitions])
+  }, [state.count, state.current, props.customTransitions])
 
   // --------------------------------------------------------------------------- RENDER
 
@@ -182,4 +181,4 @@ function Stack(props: IProps): JSX.Element {
   );
 }
 
-export default Stack
+export default memo(Stack)
